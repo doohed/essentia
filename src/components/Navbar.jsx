@@ -8,9 +8,14 @@ const Left = styled.div``;
 
 const Right = styled.div``;
 
-const Nav = styled.div``;
+const Nav = styled.div`
+margin-top: 10px;
+`;
 
-const Item = styled.a``;
+const Item = styled.a`
+margin: 10px;
+cursor: pointer;
+`;
 
 const Logo = styled.div`
   
@@ -43,7 +48,7 @@ const Navbar = () => {
         <Top>
           <Left>
             <Logo>
-              <h2 className="text-4xl font-light tracking-widest">ESSENTIA</h2>
+              <h2 className="text-4xl tracking-widest">ESSENTIA</h2>
             </Logo>
           </Left>
           <Right>
