@@ -17,10 +17,12 @@ const Item = styled.a`
   cursor: pointer;
 `;
 
-const Logo = styled.div``;
+const Logo = styled.div`
+cursor: pointer;
+`;
 
 const Top = styled.div`
-  height: 5vh;
+  height: 50px;
   position: fixed;
   border-bottom: 3px black solid;
   width: 90vw;
@@ -32,10 +34,10 @@ const Top = styled.div`
 
 const Menu = styled.div`
   width: 20vw;
-  height: 90vh;
+  height: 90vmin;
   position: fixed;
   right: 4.6vw;
-  top: 7vmin;
+  top: 60px;
   border-left: 3px solid black;
   z-index: 1;
   background-color: white;
