@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 const Section = styled.div`
   margin-top: 7vh;
-  width: 60vw;
+  width: 80vw;
 `;
 
-const Container = styled.div``;
+const Container = styled.div`
+  height: 200vh;
+`;
 
 const Landing = styled.div`
+  height: 90vh;
 `;
 
 const Body = styled.div``;
@@ -25,20 +28,21 @@ const Hero = () => {
     <Section>
       <Container>
         <Landing>
-          <div className="relative h-[100vh]">
-            <img
-              className=" z-[-1] w-[80vmin]  left-[5vw] mt-5 object-cover"
-              src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=2066&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            />
-            <Title className="bg-gray-200 w-[80vmin] h-[100px] p-2">
-              <h2>Elevate Spaces</h2>
-              <h1>Art in Simplicity</h1>
+          <div className="relative h-[90vh]">
+            <Title className="bg-black absolute bottom-0 p-2">
+              <h2 className="text-white">Seasonal Sport Jackets</h2>
+              <h1 className="text-white">New Arrivals</h1>
+              <Explore>
+                <a className="text-white ease-in-out duration-200" href="">
+                  EXPLORE
+                </a>
+              </Explore>
             </Title>
-            <Explore>
-              <a className="ease-in-out duration-200" href="">
-                EXPLORE
-              </a>
-            </Explore>
+
+            <img
+              className="z-[-1] absolute w-[70vw] h-[89.9vh] object-cover"
+              src="https://angloitalian.com/cdn/shop/files/Anglo-Italian_16099.jpg?v=1712922526&width=1900"
+            />
           </div>
         </Landing>
         <Body></Body>

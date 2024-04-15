@@ -9,22 +9,19 @@ const Left = styled.div``;
 const Right = styled.div``;
 
 const Nav = styled.div`
-margin-top: 10px;
+  margin-top: 10px;
 `;
 
 const Item = styled.a`
-margin: 10px;
-cursor: pointer;
+  margin: 10px;
+  cursor: pointer;
 `;
 
-const Logo = styled.div`
-  
-`;
+const Logo = styled.div``;
 
 const Top = styled.div`
   height: 5vh;
   position: fixed;
-  z-index: 1;
   border-bottom: 3px black solid;
   width: 90vw;
   display: flex;
@@ -33,12 +30,28 @@ const Top = styled.div`
 `;
 
 const Menu = styled.div`
-  width: 30vw;
+  width: 20vw;
   height: 90vh;
   position: fixed;
   right: 4.6vw;
   top: 7vmin;
   border-left: 3px solid black;
+  z-index: 1;
+  background-color: white;
+`;
+
+const Card = styled.div`
+padding: 1vmin;
+padding-left: 3vmin;
+`;
+
+const ItemMenu = styled.div`
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  &:hover{
+    color:gray;
+  }
 `;
 
 const Navbar = () => {
@@ -60,7 +73,14 @@ const Navbar = () => {
           </Right>
         </Top>
         <Menu>
-
+          <Card>
+            <ItemMenu>New Arrivals</ItemMenu>
+            <ItemMenu>Tailoring</ItemMenu>
+            <ItemMenu>Shirting</ItemMenu>
+            <ItemMenu>Footwear</ItemMenu>
+            <ItemMenu>Accessories</ItemMenu>
+            <ItemMenu>Tessuti</ItemMenu>
+          </Card>
         </Menu>
       </Container>
     </Section>
