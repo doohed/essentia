@@ -27,6 +27,7 @@ const Top = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: white;
+  z-index: 1;
 `;
 
 const Menu = styled.div`
