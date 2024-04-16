@@ -41,6 +41,12 @@ const Menu = styled.div`
   border-left: 3px solid black;
   z-index: 1;
   background-color: white;
+  @media (max-width: 990px) {
+    top: 50px;
+    height: 95vh;
+    width: 90vw;
+    transform: translate(120%, 0%);
+  }
 `;
 
 const Card = styled.div`
@@ -69,7 +75,6 @@ const Navbar = () => {
           </Left>
           <Right>
             <Nav>
-              <Item>HOME</Item>
               <Item>SHOP</Item>
               <Item>CART</Item>
             </Nav>

@@ -3,6 +3,9 @@ import styled from "styled-components";
 const Section = styled.div`
   margin-top: 60px;
   width: 70vw;
+  @media (max-width: 990px) {
+    width: 90vw;
+  }
 `;
 
 const Container = styled.div``;
@@ -34,6 +37,12 @@ const Logo = styled.div`
   cursor: pointer;
 `;
 
+const Image = styled.img`
+  @media (max-width: 990px) {
+    width: 90vw;
+  }
+`;
+
 const Hero = () => {
   return (
     <Section>
@@ -50,16 +59,16 @@ const Hero = () => {
               </Explore>
             </Title>
 
-            <img
-              className="z-[-1] absolute w-[70vw] h-[90vmin] object-cover"
+            <Image
+              className="z-[-1] absolute w-[70vw] h-[90vmin] object-cover max-[990px]:h-[90vh]"
               src="https://angloitalian.com/cdn/shop/files/Anglo-Italian_16099.jpg?v=1712922526&width=1900"
             />
           </div>
         </Landing>
         <Body className="mt-[200px]">
-          <div className="flex between">
-            <Product className="w-[35vw]">
-              <img
+          <div className="flex between max-[990px]:inline">
+            <Product className="w-[35vw] max-[990px]:w-[auto]">
+              <Image
                 className=" w-[34vw] h-[60vh] object-cover"
                 src="https://angloitalian.com/cdn/shop/files/WEBUntitled_Session29190_copy_736x.jpg?v=1712318282"
               />
@@ -75,8 +84,8 @@ const Hero = () => {
                 </Explore>
               </Title>
             </Product>
-            <Product className="w-[35vw]">
-              <img
+            <Product className="w-[35vw] max-[990px]:w-[auto]">
+              <Image
                 className=" w-[34vw] h-[60vh] object-cover"
                 src="https://angloitalian.com/cdn/shop/files/WEBUntitled-Session29190-232_736x.jpg?v=1712318519"
               />
@@ -94,9 +103,9 @@ const Hero = () => {
               </Title>
             </Product>
           </div>
-          <div className="flex between mt-[70px]">
-            <Product className="w-[35vw]">
-              <img
+          <div className="flex mt-[70px] max-[990px]:inline">
+            <Product className="w-[35vw] max-[990px]:w-[auto]">
+              <Image
                 className=" w-[34vw] h-[60vh] object-cover"
                 src="https://angloitalian.com/cdn/shop/files/Look_7_0004-Edit2_549x.jpg?v=1711544138"
               />
@@ -112,8 +121,8 @@ const Hero = () => {
                 </Explore>
               </Title>
             </Product>
-            <Product className="w-[35vw]">
-              <img
+            <Product className="w-[35vw] max-[990px]:w-[auto]">
+              <Image
                 className=" w-[34vw] h-[60vh] object-cover"
                 src="https://angloitalian.com/cdn/shop/files/Look_5_0004-Edit_44ccbeba-4eb8-4499-8371-30389e06b376_549x.jpg?v=1712322663"
               />
@@ -129,8 +138,8 @@ const Hero = () => {
                 </Explore>
               </Title>
             </Product>
-            <Product className="w-[35vw]">
-              <img
+            <Product className="w-[35vw] max-[990px]:w-[auto]">
+              <Image
                 className=" w-[34vw] h-[60vh] object-cover"
                 src="https://angloitalian.com/cdn/shop/files/Look_3_0005-Edit2_59c35d93-4fc4-45fa-8ab6-2e47c7708e34_549x.jpg?v=1712322730"
               />
@@ -148,36 +157,34 @@ const Hero = () => {
             </Product>
           </div>
           <div className="relative mt-[100px] content-center">
-            <img
+            <Image
               className=" w-[70vw] object-cover"
               src="https://angloitalian.com/cdn/shop/files/WEBWEBUntitled-Session29990-copy044.jpg?v=1712835074&width=1900"
             />
-            <div className="top-[80%] left-[50%] translate-x-[-50%] absolute bottom-0 text-center">
+            <div className="top-[70%] left-[50%] translate-x-[-50%] absolute bottom-0 text-center max-[990px]:top-0">
               <h2 className="text-[20px]">Weddings</h2>
-              <h1 className="text-[18px] mt-[10px]">
-              Community Portraits IV
-              </h1>
+              <h1 className="text-[18px] mt-[10px]">Community Portraits IV</h1>
             </div>
           </div>
         </Body>
         <Footer>
-          <div className="flex">
+          <div className="flex max-[990px]:text-[14px]">
             <div>
-              <a href="" className="mr-[20px]">
+              <a className="mr-[20px] max-[990px]:mr-[15px]">
                 Instagram
               </a>
             </div>
             <div>
-              <a href="" className="mr-[20px]">
+              <a className="mr-[20px] max-[990px]:mr-[15px]">
                 Terms and Conditions
               </a>
             </div>
             <div>
-              <a href="">Privacy Policy</a>
+              <a>Privacy Policy</a>
             </div>
           </div>
           <Logo>
-            <a className="mr-[30px]">© 2024 ESSENTIA</a>
+            <a className="mr-[30px] max-[990px]:mr-[0px] max-[990px]:text-[15px]">© 2024 ESSENTIA</a>
           </Logo>
         </Footer>
       </Container>
