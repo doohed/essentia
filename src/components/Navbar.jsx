@@ -19,6 +19,7 @@ const Item = styled.a`
 `;
 
 const Logo = styled.div`
+  margin-top: 4px;
   cursor: pointer;
 `;
 
@@ -42,6 +43,7 @@ const Menu = styled.div`
   border-left: 3px solid black;
   z-index: 1;
   background-color: white;
+  transform: translate(0%, 0%);
   @media (max-width: 990px) {
     border: 0px;
     text-align: center;
@@ -67,19 +69,21 @@ const ItemMenu = styled.div`
 `;
 
 const Navbar = () => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   function menu() {
     if (isOpen === true) {
-      document.querySelector("#menu").style.transform = 'translate(120%, 0%)';
+      document.querySelector("#menu").style.transform = "translate(120%, 0%)";
+      document.querySelector("#x").style.display = "none";
+      document.querySelector("#ham").style.display = "inline";
       setIsOpen(false);
     } else {
-      document.querySelector("#menu").style.transform = 'translate(2%, 0%)';
+      document.querySelector("#menu").style.transform = "translate(2%, 0%)";
+      document.querySelector("#ham").style.display = "none";
+      document.querySelector("#x").style.display = "inline";
       setIsOpen(true);
     }
   }
-
 
   return (
     <Section>
@@ -94,8 +98,25 @@ const Navbar = () => {
             <Nav>
               <Item className="max-[990px]:hidden">SHOP</Item>
               <Item className="max-[990px]:hidden">CART</Item>
-              <a onClick={menu} className="cursor-pointer min-[990px]:hidden">
+              <div onClick={menu} className="cursor-pointer min-[990px]:hidden">
                 <svg
+                  id="x"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-9 h-8 hidden"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+
+                <svg
+                  id="ham"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -109,7 +130,7 @@ const Navbar = () => {
                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                   />
                 </svg>
-              </a>
+              </div>
             </Nav>
           </Right>
         </Top>
