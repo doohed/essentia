@@ -35,6 +35,7 @@ const Product = styled.div`
 
 const Logo = styled.div`
   cursor: pointer;
+  margin-top: -4px;
 `;
 
 const Image = styled.img`
@@ -161,30 +162,30 @@ const Hero = () => {
               className=" w-[70vw] object-cover"
               src="https://angloitalian.com/cdn/shop/files/WEBWEBUntitled-Session29990-copy044.jpg?v=1712835074&width=1900"
             />
-            <div className="top-[70%] left-[50%] translate-x-[-50%] absolute bottom-0 text-center max-[990px]:top-0">
+            <div className="top-[70%] left-[50%] translate-x-[-50%] absolute bottom-0 text-center max-[990px]:top-[-90px]">
               <h2 className="text-[20px]">Weddings</h2>
               <h1 className="text-[18px] mt-[10px]">Community Portraits IV</h1>
             </div>
           </div>
         </Body>
         <Footer>
-          <div className="flex max-[990px]:text-[14px]">
+          <div className="flex max-[990px]:text-[12px]">
             <div>
-              <a className="mr-[20px] max-[990px]:mr-[15px]">
+              <a className="cursor-pointer mr-[20px] max-[990px]:mr-[15px]">
                 Instagram
               </a>
             </div>
             <div>
-              <a className="mr-[20px] max-[990px]:mr-[15px]">
+              <a className="cursor-pointer mr-[20px] max-[990px]:mr-[15px]">
                 Terms and Conditions
               </a>
             </div>
             <div>
-              <a>Privacy Policy</a>
+              <a className="cursor-pointer">Privacy Policy</a>
             </div>
           </div>
           <Logo>
-            <a className="mr-[30px] max-[990px]:mr-[0px] max-[990px]:text-[15px]">© 2024 ESSENTIA</a>
+            <a className=" mr-[30px] max-[990px]:mr-[0px] max-[990px]:text-[12px]">© 2024 ESSENTIA</a>
           </Logo>
         </Footer>
       </Container>
