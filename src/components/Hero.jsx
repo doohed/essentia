@@ -171,12 +171,12 @@ const Hero = () => {
         <Footer>
           <div className="flex max-[990px]:text-[12px]">
             <div>
-              <a className="cursor-pointer mr-[20px] max-[990px]:mr-[15px]">
+              <a className="cursor-pointer mr-[20px] max-[990px]:mr-[5px]">
                 Instagram
               </a>
             </div>
             <div>
-              <a className="cursor-pointer mr-[20px] max-[990px]:mr-[15px]">
+              <a className="cursor-pointer mr-[20px] max-[990px]:mr-[5px]">
                 Terms and Conditions
               </a>
             </div>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 const Section = styled.div``;
@@ -46,7 +47,7 @@ const Menu = styled.div`
     text-align: center;
     top: 50px;
     height: 95vh;
-    width: 92vw;
+    width: 93vw;
     transform: translate(120%, 0%);
   }
 `;
@@ -66,6 +67,20 @@ const ItemMenu = styled.div`
 `;
 
 const Navbar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  function menu() {
+    if (isOpen === true) {
+      document.querySelector("#menu").style.transform = 'translate(120%, 0%)';
+      setIsOpen(false);
+    } else {
+      document.querySelector("#menu").style.transform = 'translate(2%, 0%)';
+      setIsOpen(true);
+    }
+  }
+
+
   return (
     <Section>
       <Container>
@@ -79,7 +94,7 @@ const Navbar = () => {
             <Nav>
               <Item className="max-[990px]:hidden">SHOP</Item>
               <Item className="max-[990px]:hidden">CART</Item>
-              <a className="cursor-pointer min-[990px]:hidden">
+              <a onClick={menu} className="cursor-pointer min-[990px]:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -98,7 +113,7 @@ const Navbar = () => {
             </Nav>
           </Right>
         </Top>
-        <Menu className="ease-in-out duration-300">
+        <Menu className="ease-in-out duration-300" id="menu">
           <Card>
             <ItemMenu className="min-[990px]:hidden">Shop</ItemMenu>
             <ItemMenu className="min-[990px]:hidden mb-[20px]">Cart</ItemMenu>

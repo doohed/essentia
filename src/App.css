@@ -4,3 +4,6 @@
 }
 
 
+.show {
+  transform: translate(2%, 0%);
+}
