@@ -18,7 +18,7 @@ const Item = styled.a`
 `;
 
 const Logo = styled.div`
-cursor: pointer;
+  cursor: pointer;
 `;
 
 const Top = styled.div`
@@ -42,24 +42,26 @@ const Menu = styled.div`
   z-index: 1;
   background-color: white;
   @media (max-width: 990px) {
+    border: 0px;
+    text-align: center;
     top: 50px;
     height: 95vh;
-    width: 90vw;
+    width: 92vw;
     transform: translate(120%, 0%);
   }
 `;
 
 const Card = styled.div`
-padding: 1vmin;
-padding-left: 3vmin;
+  padding: 1vmin;
+  padding-left: 3vmin;
 `;
 
 const ItemMenu = styled.div`
   font-size: 25px;
   cursor: pointer;
   font-weight: 600;
-  &:hover{
-    color:gray;
+  &:hover {
+    color: gray;
   }
 `;
 
@@ -75,13 +77,31 @@ const Navbar = () => {
           </Left>
           <Right>
             <Nav>
-              <Item>SHOP</Item>
-              <Item>CART</Item>
+              <Item className="max-[990px]:hidden">SHOP</Item>
+              <Item className="max-[990px]:hidden">CART</Item>
+              <a className="cursor-pointer min-[990px]:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-9 h-8"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </a>
             </Nav>
           </Right>
         </Top>
-        <Menu>
+        <Menu className="ease-in-out duration-300">
           <Card>
+            <ItemMenu className="min-[990px]:hidden">Shop</ItemMenu>
+            <ItemMenu className="min-[990px]:hidden mb-[20px]">Cart</ItemMenu>
             <ItemMenu>New Arrivals</ItemMenu>
             <ItemMenu>Tailoring</ItemMenu>
             <ItemMenu>Shirting</ItemMenu>
