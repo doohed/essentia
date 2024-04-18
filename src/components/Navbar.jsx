@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -32,6 +33,9 @@ const Top = styled.div`
   justify-content: space-between;
   background-color: white;
   z-index: 1;
+  @media (max-width: 990px) {
+    border-bottom: 0px black solid;
+  }
 `;
 
 const Menu = styled.div`
@@ -43,7 +47,6 @@ const Menu = styled.div`
   border-left: 3px solid black;
   z-index: 1;
   background-color: white;
-  transform: translate(0%, 0%);
   @media (max-width: 990px) {
     border: 0px;
     text-align: center;
@@ -68,12 +71,38 @@ const ItemMenu = styled.div`
   }
 `;
 
+const Bar = styled.div`
+  overflow-y: hidden;
+  height: 50px;
+  position: fixed;
+  border-bottom: 3px black solid;
+  width: 90vw;
+  top: 50px;
+  display: none;
+  z-index: 1;
+  background-color: black;
+  color: white;
+  @media (max-width: 990px) {
+    display: inline;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+const BarItem = styled.div`
+  cursor: pointer;
+  &:hover {
+    color: gray;
+  }
+`;
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   function menu() {
     if (isOpen === true) {
-      document.querySelector("#menu").style.transform = "translate(120%, 0%)";
+      document.querySelector("#menu").style.transform = "translate(140%, 0%)";
       document.querySelector("#x").style.display = "none";
       document.querySelector("#ham").style.display = "inline";
       setIsOpen(false);
@@ -98,7 +127,7 @@ const Navbar = () => {
             <Nav>
               <Item className="max-[990px]:hidden">SHOP</Item>
               <Item className="max-[990px]:hidden">CART</Item>
-              <div onClick={menu} className="cursor-pointer min-[990px]:hidden">
+              <div onClick={menu} className="cursor-pointer min-[991px]:hidden">
                 <svg
                   id="x"
                   xmlns="http://www.w3.org/2000/svg"
@@ -134,16 +163,35 @@ const Navbar = () => {
             </Nav>
           </Right>
         </Top>
-        <Menu className="ease-in-out duration-300" id="menu">
+        <Bar className="text-[16px] overflow-x-scroll">
+          <div className="ml-[10px] flex mt-[13px] w-[540px] ">
+            <BarItem className="mr-[2vw]">New Arrivals</BarItem>
+            <BarItem className="mr-[2vw]">Shirting</BarItem>
+            <BarItem className="mr-[2vw]">Footwear</BarItem>
+            <BarItem className="mr-[2vw]">Tailoring</BarItem>
+            <BarItem className="mr-[2vw]">Outwear</BarItem>
+            <BarItem className="mr-[2vw]">Denim</BarItem>
+          </div>
+        </Bar>
+        <Menu>
           <Card>
             <ItemMenu className="min-[990px]:hidden">Shop</ItemMenu>
             <ItemMenu className="min-[990px]:hidden mb-[20px]">Cart</ItemMenu>
             <ItemMenu>New Arrivals</ItemMenu>
-            <ItemMenu>Tailoring</ItemMenu>
             <ItemMenu>Shirting</ItemMenu>
             <ItemMenu>Footwear</ItemMenu>
-            <ItemMenu>Accessories</ItemMenu>
-            <ItemMenu>Tessuti</ItemMenu>
+            <ItemMenu>Tailoring</ItemMenu>
+            <ItemMenu>Outwear</ItemMenu>
+            <ItemMenu>Denim</ItemMenu>
+          </Card>
+        </Menu>
+        <Menu
+          className="ease-in-out duration-300 min-[990px]:translate-x-[140%]"
+          id="menu"
+        >
+          <Card>
+            <ItemMenu>Shop</ItemMenu>
+            <ItemMenu>Cart</ItemMenu>
           </Card>
         </Menu>
       </Container>
