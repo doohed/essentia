@@ -48,24 +48,26 @@ const Hero = () => {
   return (
     <Section>
       <Container>
-        <Landing>
-          <div className="relative h-[90vmin]">
-            <Title className="bg-black absolute bottom-0 p-2">
-              <h2 className="text-white">Seasonal Sport Jackets</h2>
-              <h1 className="text-white">New Arrivals</h1>
-              <Explore>
-                <a className="text-white ease-in-out duration-200" href="">
-                  EXPLORE
-                </a>
-              </Explore>
-            </Title>
+        <a href="/new">
+          <Landing>
+            <div className="relative h-[90vmin]">
+              <Title className="bg-black absolute bottom-0 p-2">
+                <h2 className="text-white">Seasonal Sport Jackets</h2>
+                <h1 className="text-white">New Arrivals</h1>
+                <Explore>
+                  <a className="text-white ease-in-out duration-200" href="">
+                    EXPLORE
+                  </a>
+                </Explore>
+              </Title>
 
-            <Image
-              className="z-[-1] absolute w-[70vw] h-[90vmin] object-cover max-[990px]:h-[90vh]"
-              src="https://angloitalian.com/cdn/shop/files/Anglo-Italian_16099.jpg?v=1712922526&width=1900"
-            />
-          </div>
-        </Landing>
+              <Image
+                className="z-[-1] absolute w-[70vw] h-[90vmin] object-cover max-[990px]:h-[90vh]"
+                src="https://angloitalian.com/cdn/shop/files/Anglo-Italian_16099.jpg?v=1712922526&width=1900"
+              />
+            </div>
+          </Landing>
+        </a>
         <Body className="mt-[200px]">
           <div className="flex between max-[990px]:inline">
             <Product className="w-[35vw] max-[990px]:w-[auto]">
@@ -185,7 +187,9 @@ const Hero = () => {
             </div>
           </div>
           <Logo>
-            <a className=" mr-[30px] max-[990px]:mr-[0px] max-[990px]:text-[12px]">© 2024 ESSENTIA</a>
+            <a className=" mr-[30px] max-[990px]:mr-[0px] max-[990px]:text-[12px]">
+              © 2024 ESSENTIA
+            </a>
           </Logo>
         </Footer>
       </Container>

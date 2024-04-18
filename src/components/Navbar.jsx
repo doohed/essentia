@@ -20,7 +20,7 @@ const Item = styled.a`
 `;
 
 const Logo = styled.div`
-  margin-top: 4px;
+  margin-top: 5px;
   cursor: pointer;
 `;
 
@@ -62,7 +62,7 @@ const Card = styled.div`
   padding-left: 3vmin;
 `;
 
-const ItemMenu = styled.div`
+const ItemMenu = styled.a`
   font-size: 25px;
   cursor: pointer;
   font-weight: 600;
@@ -120,7 +120,9 @@ const Navbar = () => {
         <Top>
           <Left>
             <Logo>
-              <h2 className="text-4xl tracking-widest">ESSENTIA</h2>
+              <a href="/" className="hover:text-black">
+                <h2 className="text-4xl tracking-widest">ESSENTIA</h2>
+              </a>
             </Logo>
           </Left>
           <Right>
@@ -165,24 +167,47 @@ const Navbar = () => {
         </Top>
         <Bar className="text-[16px] overflow-x-scroll">
           <div className="ml-[10px] flex mt-[13px] w-[540px] ">
-            <BarItem className="mr-[2vw]">New Arrivals</BarItem>
-            <BarItem className="mr-[2vw]">Shirting</BarItem>
-            <BarItem className="mr-[2vw]">Footwear</BarItem>
-            <BarItem className="mr-[2vw]">Tailoring</BarItem>
-            <BarItem className="mr-[2vw]">Outwear</BarItem>
-            <BarItem className="mr-[2vw]">Denim</BarItem>
+            <a href="/new" className="text-white">
+              <BarItem className="mr-[2vw]">New Arrivals</BarItem>
+            </a>
+            <a href="" className="text-white">
+              <BarItem className="mr-[2vw]">Shirting</BarItem>
+            </a>
+            <a href="" className="text-white">
+              <BarItem className="mr-[2vw]">Footwear</BarItem>
+            </a>
+            <a href="" className="text-white">
+              <BarItem className="mr-[2vw]">Tailoring</BarItem>
+            </a>
+            <a href="" className="text-white">
+              <BarItem className="mr-[2vw]">Outwear</BarItem>
+            </a>
+            <a href="" className="text-white">
+              <BarItem className="mr-[2vw]">Denim</BarItem>
+            </a>
           </div>
         </Bar>
         <Menu>
           <Card>
-            <ItemMenu className="min-[990px]:hidden">Shop</ItemMenu>
-            <ItemMenu className="min-[990px]:hidden mb-[20px]">Cart</ItemMenu>
-            <ItemMenu>New Arrivals</ItemMenu>
-            <ItemMenu>Shirting</ItemMenu>
-            <ItemMenu>Footwear</ItemMenu>
-            <ItemMenu>Tailoring</ItemMenu>
-            <ItemMenu>Outwear</ItemMenu>
-            <ItemMenu>Denim</ItemMenu>
+            <div>
+              <ItemMenu href="/new">New Arrivals</ItemMenu>
+            </div>
+            <div>
+              <ItemMenu>Shirting</ItemMenu>
+            </div>
+            <div>
+              <ItemMenu>Footwear</ItemMenu>
+            </div>
+            <div>
+              <ItemMenu>Tailoring</ItemMenu>
+            </div>
+            <div>
+              <ItemMenu>Outwear</ItemMenu>
+            </div>
+
+            <div>
+              <ItemMenu>Denim</ItemMenu>
+            </div>
           </Card>
         </Menu>
         <Menu
@@ -190,8 +215,12 @@ const Navbar = () => {
           id="menu"
         >
           <Card>
-            <ItemMenu>Shop</ItemMenu>
-            <ItemMenu>Cart</ItemMenu>
+            <div>
+              <ItemMenu>Shop</ItemMenu>
+            </div>
+            <div>
+              <ItemMenu>Cart</ItemMenu>
+            </div>
           </Card>
         </Menu>
       </Container>

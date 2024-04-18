@@ -10,10 +10,6 @@ const Section = styled.div`
 
 const Container = styled.div``;
 
-const Landing = styled.div`
-  height: 90vh;
-`;
-
 const Body = styled.div``;
 
 const Footer = styled.div`
@@ -44,13 +40,22 @@ const Image = styled.img`
   }
 `;
 
+const Holder = styled.div`
+display: grid;
+grid-template-columns: auto auto auto;
+@media (max-width: 990px) {
+    grid-template-columns: auto auto;
+  }
+
+`;
+
 const New = () => {
   return (
     <Section>
       <Container>
         <Body>
-          <div className="flex mt-[70px] max-[990px]:mt-[120px]">
-            <Product className=" relative w-[35vw] max-[990px]:w-[auto]">
+          <Holder className=" mt-[70px] max-[990px]:mt-[120px]">
+            <Product className=" relative max-[990px]:w-[auto]">
               <Image
                 className=" w-[34vw] h-[40vh] object-cover "
                 src="https://angloitalian.com/cdn/shop/files/Anglo-Italian_16122.jpg?v=1712917693&width=500"
@@ -65,7 +70,7 @@ const New = () => {
                 </Explore>
               </Title>
             </Product>
-            <Product className="w-[35vw] max-[990px]:w-[auto]">
+            <Product className=" max-[990px]:w-[auto]">
               <Image
                 className=" w-[34vw] h-[40vh] object-cover"
                 src="https://angloitalian.com/cdn/shop/files/Anglo-Italian_16142.jpg?v=1712917634&width=500"
@@ -80,14 +85,14 @@ const New = () => {
                 </Explore>
               </Title>
             </Product>
-            <Product className="w-[35vw] max-[990px]:w-[auto]">
+            <Product className=" max-[990px]:w-[auto]">
               <Image
                 className=" w-[34vw] h-[40vh] object-cover"
                 src="https://angloitalian.com/cdn/shop/files/Anglo-Italian_161492.jpg?v=1712918751&width=500"
               />
               <Title className=" bottom-0 p-2">
                 <h2 className="text-[15px]">
-                Sport Jacket Single Breasted Sand Glen Plaid Emerald Overcheck
+                  Sport Jacket Single Breasted Sand Glen Plaid Emerald Overcheck
                 </h2>
 
                 <Explore className="mt-[10px]">
@@ -95,16 +100,15 @@ const New = () => {
                 </Explore>
               </Title>
             </Product>
-          </div>
-          <div className="flex mt-[70px]">
-            <Product className=" relative w-[35vw] max-[990px]:w-[auto]">
+
+            <Product className="relative  max-[990px]:w-[auto]">
               <Image
                 className=" w-[34vw] h-[40vh] object-cover "
                 src="https://angloitalian.com/cdn/shop/files/Anglo-Italian_161122.jpg?v=1712918774&width=500"
               />
               <Title className=" bottom-0 p-2">
                 <h2 className="text-[15px]">
-                Sport Jacket Single Breasted Sand Herringbone
+                  Sport Jacket Single Breasted Sand Herringbone
                 </h2>
 
                 <Explore className="mt-[10px]">
@@ -112,14 +116,14 @@ const New = () => {
                 </Explore>
               </Title>
             </Product>
-            <Product className="w-[35vw] max-[990px]:w-[auto]">
+            <Product className="max-[990px]:w-[auto]">
               <Image
                 className=" w-[34vw] h-[40vh] object-cover"
                 src="https://angloitalian.com/cdn/shop/files/Anglo-Italian_10822_a07f5caa-3596-451b-a9b6-c05aad6a3ddc.jpg?v=1711556884&width=500"
               />
               <Title className=" bottom-0 p-2">
                 <h2 className="text-[15px]">
-                Sport Jacket Single Breasted Brown Herringbone Linen
+                  Sport Jacket Single Breasted Brown Herringbone Linen
                 </h2>
 
                 <Explore className="mt-[10px]">
@@ -127,14 +131,14 @@ const New = () => {
                 </Explore>
               </Title>
             </Product>
-            <Product className="w-[35vw] max-[990px]:w-[auto]">
+            <Product className=" max-[990px]:w-[auto]">
               <Image
                 className=" w-[34vw] h-[40vh] object-cover"
                 src="https://angloitalian.com/cdn/shop/files/Anglo-Italian_19243_3.jpg?v=1698692119&width=500"
               />
               <Title className=" bottom-0 p-2">
                 <h2 className="text-[15px]">
-                Tailored Trouser Twisted Linen Brown
+                  Tailored Trouser Twisted Linen Brown
                 </h2>
 
                 <Explore className="mt-[10px]">
@@ -142,7 +146,7 @@ const New = () => {
                 </Explore>
               </Title>
             </Product>
-          </div>
+          </Holder>
         </Body>
         <Footer>
           <div className="flex max-[990px]:text-[12px]">
