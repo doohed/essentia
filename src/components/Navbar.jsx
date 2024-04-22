@@ -126,7 +126,7 @@ const Navbar = () => {
           </Left>
           <Right>
             <Nav>
-              <Item className="max-[990px]:hidden">SHOP</Item>
+              <Item className="max-[990px]:hidden" href="/new">SHOP</Item>
               <Item className="max-[990px]:hidden">CART</Item>
               <div onClick={menu} className="cursor-pointer min-[991px]:hidden">
                 <svg

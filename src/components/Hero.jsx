@@ -86,7 +86,7 @@ const Hero = () => {
                   OCBD's, Poplin Shirts & Seasonal Staples.
                 </h1>
                 <Explore className="mt-[10px]">
-                  <a className=" ease-in-out duration-200" href="">
+                  <a className=" ease-in-out duration-200" href="/shirting">
                     EXPLORE
                   </a>
                 </Explore>
@@ -106,7 +106,7 @@ const Hero = () => {
                   Boat Shoes.
                 </h1>
                 <Explore className="mt-[10px]">
-                  <a className=" ease-in-out duration-200" href="">
+                  <a className=" ease-in-out duration-200" href="/footwear">
                     EXPLORE
                   </a>
                 </Explore>
@@ -127,7 +127,7 @@ const Hero = () => {
                   Seasonal Suits, Sports Jackets & Tailored Trousers.
                 </h1>
                 <Explore className="mt-[10px]">
-                  <a className=" ease-in-out duration-200" href="">
+                  <a className=" ease-in-out duration-200" href="/tailoring">
                     EXPLORE
                   </a>
                 </Explore>
@@ -146,7 +146,7 @@ const Hero = () => {
                   Wax Jackets, Transitional Bombers & Mid-Weight Windbreakers.
                 </h1>
                 <Explore className="mt-[10px]">
-                  <a className=" ease-in-out duration-200" href="">
+                  <a className=" ease-in-out duration-200" href="/outwear">
                     EXPLORE
                   </a>
                 </Explore>
@@ -165,7 +165,7 @@ const Hero = () => {
                   13oz Selvedge Denim. Unique Fit. Made In Italy.
                 </h1>
                 <Explore className="mt-[10px]">
-                  <a className=" ease-in-out duration-200" href="">
+                  <a className=" ease-in-out duration-200" href="/denim">
                     EXPLORE
                   </a>
                 </Explore>
