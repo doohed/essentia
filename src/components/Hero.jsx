@@ -55,9 +55,9 @@ const Hero = () => {
                 <h2 className="text-white">Seasonal Sport Jackets</h2>
                 <h1 className="text-white">New Arrivals</h1>
                 <Explore>
-                  <a href="/new" className="text-white ease-in-out duration-200">
+                  <div href="/new" className="text-white ease-in-out duration-200">
                     EXPLORE
-                  </a>
+                  </div>
                 </Explore>
               </Title>
 

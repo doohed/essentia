@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 import { data } from "./data/mockData";
 
@@ -49,7 +50,7 @@ const Holder = styled.div`
   }
 `;
 
-const New = () => {
+const Tailoring = () => {
   return (
     <Section>
       <Container>
@@ -95,4 +96,4 @@ const New = () => {
   );
 };
 
-export default New;
+export default Tailoring;

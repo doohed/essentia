@@ -1,5 +1,6 @@
+
 import styled from "styled-components";
-import { data } from "./data/mockData";
+import { data } from "./data/denimData";
 
 const Section = styled.div`
   margin-top: 60px;
@@ -49,7 +50,7 @@ const Holder = styled.div`
   }
 `;
 
-const New = () => {
+const Denim = () => {
   return (
     <Section>
       <Container>
@@ -95,4 +96,4 @@ const New = () => {
   );
 };
 
-export default New;
+export default Denim;

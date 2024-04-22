@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -166,23 +165,23 @@ const Navbar = () => {
           </Right>
         </Top>
         <Bar className="text-[16px] overflow-x-scroll">
-          <div className="ml-[10px] flex mt-[13px] w-[540px] ">
+          <div className="ml-[10px] flex mt-[13px] w-[505px] ">
             <a href="/new" className="text-white">
               <BarItem className="mr-[2vw]">New Arrivals</BarItem>
             </a>
-            <a href="" className="text-white">
+            <a href="/shirting" className="text-white">
               <BarItem className="mr-[2vw]">Shirting</BarItem>
             </a>
-            <a href="" className="text-white">
+            <a href="/footwear" className="text-white">
               <BarItem className="mr-[2vw]">Footwear</BarItem>
             </a>
-            <a href="" className="text-white">
+            <a href="/tailoring" className="text-white">
               <BarItem className="mr-[2vw]">Tailoring</BarItem>
             </a>
-            <a href="" className="text-white">
+            <a href="/outwear" className="text-white">
               <BarItem className="mr-[2vw]">Outwear</BarItem>
             </a>
-            <a href="" className="text-white">
+            <a href="/denim" className="text-white">
               <BarItem className="mr-[2vw]">Denim</BarItem>
             </a>
           </div>
@@ -193,20 +192,20 @@ const Navbar = () => {
               <ItemMenu href="/new">New Arrivals</ItemMenu>
             </div>
             <div>
-              <ItemMenu>Shirting</ItemMenu>
+              <ItemMenu href="/shirting">Shirting</ItemMenu>
             </div>
             <div>
-              <ItemMenu>Footwear</ItemMenu>
+              <ItemMenu href="/footwear">Footwear</ItemMenu>
             </div>
             <div>
-              <ItemMenu>Tailoring</ItemMenu>
+              <ItemMenu href="/tailoring">Tailoring</ItemMenu>
             </div>
             <div>
-              <ItemMenu>Outwear</ItemMenu>
+              <ItemMenu href="/outwear">Outwear</ItemMenu>
             </div>
 
             <div>
-              <ItemMenu>Denim</ItemMenu>
+              <ItemMenu href="/denim">Denim</ItemMenu>
             </div>
           </Card>
         </Menu>
@@ -216,7 +215,7 @@ const Navbar = () => {
         >
           <Card>
             <div>
-              <ItemMenu>Shop</ItemMenu>
+              <ItemMenu href="/new">Shop</ItemMenu>
             </div>
             <div>
               <ItemMenu>Cart</ItemMenu>
