@@ -55,7 +55,10 @@ const Hero = () => {
                 <h2 className="text-white">Seasonal Sport Jackets</h2>
                 <h1 className="text-white">New Arrivals</h1>
                 <Explore>
-                  <div href="/new" className="text-white ease-in-out duration-200">
+                  <div
+                    href="/new"
+                    className="text-white ease-in-out duration-200"
+                  >
                     EXPLORE
                   </div>
                 </Explore>
@@ -71,10 +74,12 @@ const Hero = () => {
         <Body className="mt-[200px]">
           <div className="flex between max-[990px]:inline">
             <Product className="w-[35vw] max-[990px]:w-[auto]">
-              <Image
-                className=" w-[34vw] h-[60vh] object-cover"
-                src="https://angloitalian.com/cdn/shop/files/WEBUntitled_Session29190_copy_736x.jpg?v=1712318282"
-              />
+              <a href="/shirting">
+                <Image
+                  className=" w-[34vw] h-[60vh] object-cover"
+                  src="https://angloitalian.com/cdn/shop/files/WEBUntitled_Session29190_copy_736x.jpg?v=1712318282"
+                />
+              </a>
               <Title className=" bottom-0 p-2">
                 <h2 className="text-[20px]">Shirting</h2>
                 <h1 className="text-gray-700 text-[18px] mt-[10px]">
@@ -88,10 +93,12 @@ const Hero = () => {
               </Title>
             </Product>
             <Product className="w-[35vw] max-[990px]:w-[auto]">
-              <Image
-                className=" w-[34vw] h-[60vh] object-cover"
-                src="https://angloitalian.com/cdn/shop/files/WEBUntitled-Session29190-232_736x.jpg?v=1712318519"
-              />
+              <a href="/footwear">
+                <Image
+                  className=" w-[34vw] h-[60vh] object-cover"
+                  src="https://angloitalian.com/cdn/shop/files/WEBUntitled-Session29190-232_736x.jpg?v=1712318519"
+                />
+              </a>
               <Title className=" bottom-0 p-2">
                 <h2 className="text-[20px]">Footwear</h2>
                 <h1 className="text-gray-700 text-[18px] mt-[10px]">
@@ -108,10 +115,12 @@ const Hero = () => {
           </div>
           <div className="flex mt-[70px] max-[990px]:inline">
             <Product className="w-[35vw] max-[990px]:w-[auto]">
-              <Image
-                className=" w-[34vw] h-[60vh] object-cover"
-                src="https://angloitalian.com/cdn/shop/files/Look_7_0004-Edit2_549x.jpg?v=1711544138"
-              />
+              <a href="/tailoring">
+                <Image
+                  className=" w-[34vw] h-[60vh] object-cover"
+                  src="https://angloitalian.com/cdn/shop/files/Look_7_0004-Edit2_549x.jpg?v=1711544138"
+                />
+              </a>
               <Title className=" bottom-0 p-2">
                 <h2 className="text-[20px]">Tailoring</h2>
                 <h1 className="text-gray-700 text-[18px] mt-[10px]">
@@ -125,10 +134,12 @@ const Hero = () => {
               </Title>
             </Product>
             <Product className="w-[35vw] max-[990px]:w-[auto]">
-              <Image
-                className=" w-[34vw] h-[60vh] object-cover"
-                src="https://angloitalian.com/cdn/shop/files/Look_5_0004-Edit_44ccbeba-4eb8-4499-8371-30389e06b376_549x.jpg?v=1712322663"
-              />
+              <a href="/outwear">
+                <Image
+                  className=" w-[34vw] h-[60vh] object-cover"
+                  src="https://angloitalian.com/cdn/shop/files/Look_5_0004-Edit_44ccbeba-4eb8-4499-8371-30389e06b376_549x.jpg?v=1712322663"
+                />
+              </a>
               <Title className=" bottom-0 p-2">
                 <h2 className="text-[20px]">Outerwear</h2>
                 <h1 className="text-gray-700 text-[18px] mt-[10px]">
@@ -142,10 +153,12 @@ const Hero = () => {
               </Title>
             </Product>
             <Product className="w-[35vw] max-[990px]:w-[auto]">
-              <Image
-                className=" w-[34vw] h-[60vh] object-cover"
-                src="https://angloitalian.com/cdn/shop/files/Look_3_0005-Edit2_59c35d93-4fc4-45fa-8ab6-2e47c7708e34_549x.jpg?v=1712322730"
-              />
+              <a href="/denim">
+                <Image
+                  className=" w-[34vw] h-[60vh] object-cover"
+                  src="https://angloitalian.com/cdn/shop/files/Look_3_0005-Edit2_59c35d93-4fc4-45fa-8ab6-2e47c7708e34_549x.jpg?v=1712322730"
+                />
+              </a>
               <Title className=" bottom-0 p-2">
                 <h2 className="text-[20px]">Denim</h2>
                 <h1 className="text-gray-700 text-[18px] mt-[10px]">

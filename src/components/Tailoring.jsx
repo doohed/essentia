@@ -1,6 +1,6 @@
 
 import styled from "styled-components";
-import { data } from "./data/mockData";
+import { data } from "./data/tailoringData";
 
 const Section = styled.div`
   margin-top: 60px;
