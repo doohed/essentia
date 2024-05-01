@@ -57,7 +57,7 @@ const Tailoring = () => {
         <Body>
           <Holder className=" mt-[70px] max-[990px]:mt-[120px]">
             {data.map((item) => (
-              <Product key={`image `+item.id} className=" max-[990px]:w-[auto]">
+              <Product data-aos="fade" key={`image `+item.id} className=" max-[990px]:w-[auto]">
                 <Image className=" w-[34vw] h-[40vh] object-cover" src={item.img} />
                 <Title className=" bottom-0 p-2">
                   <h2 className="text-[15px]">{item.title}</h2>

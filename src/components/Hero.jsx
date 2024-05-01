@@ -49,7 +49,7 @@ const Hero = () => {
     <Section>
       <Container>
         <a href="/new">
-          <Landing>
+          <Landing data-aos="fade">
             <div className="relative h-[90vmin]">
               <Title className="bg-black absolute bottom-0 p-2">
                 <h2 className="text-white">Seasonal Sport Jackets</h2>
@@ -73,7 +73,7 @@ const Hero = () => {
         </a>
         <Body className="mt-[200px]">
           <div className="flex between max-[990px]:inline">
-            <Product className="w-[35vw] max-[990px]:w-[auto]">
+            <Product data-aos="fade-right" className="w-[35vw] max-[990px]:w-[auto]">
               <a href="/shirting">
                 <Image
                   className=" w-[34vw] h-[60vh] object-cover"
@@ -92,7 +92,7 @@ const Hero = () => {
                 </Explore>
               </Title>
             </Product>
-            <Product className="w-[35vw] max-[990px]:w-[auto]">
+            <Product data-aos="fade-right" className="w-[35vw] max-[990px]:w-[auto]">
               <a href="/footwear">
                 <Image
                   className=" w-[34vw] h-[60vh] object-cover"
@@ -114,7 +114,7 @@ const Hero = () => {
             </Product>
           </div>
           <div className="flex mt-[70px] max-[990px]:inline">
-            <Product className="w-[35vw] max-[990px]:w-[auto]">
+            <Product data-aos="fade-right" className="w-[35vw] max-[990px]:w-[auto]">
               <a href="/tailoring">
                 <Image
                   className=" w-[34vw] h-[60vh] object-cover"
@@ -133,7 +133,7 @@ const Hero = () => {
                 </Explore>
               </Title>
             </Product>
-            <Product className="w-[35vw] max-[990px]:w-[auto]">
+            <Product data-aos="fade-right" className="w-[35vw] max-[990px]:w-[auto]">
               <a href="/outwear">
                 <Image
                   className=" w-[34vw] h-[60vh] object-cover"
@@ -152,7 +152,7 @@ const Hero = () => {
                 </Explore>
               </Title>
             </Product>
-            <Product className="w-[35vw] max-[990px]:w-[auto]">
+            <Product data-aos="fade-right" className="w-[35vw] max-[990px]:w-[auto]">
               <a href="/denim">
                 <Image
                   className=" w-[34vw] h-[60vh] object-cover"
