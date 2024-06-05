@@ -1,4 +1,4 @@
-export const data = [
+export const tailor = [
     {
       id: 1,
       img: "https://angloitalian.com/cdn/shop/files/Anglo-Italian_16129-web.jpg?v=1713434042&width=1200",

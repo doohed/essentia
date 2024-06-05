@@ -1,4 +1,4 @@
-export const data = [
+export const foot = [
     {
       id: 1,
       img: "https://angloitalian.com/cdn/shop/files/Anglo-Italian_33661.jpg?v=1712246947&width=500",

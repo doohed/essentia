@@ -1,6 +1,4 @@
-
 import styled from "styled-components";
-import { data } from "./data/outData";
 
 const Section = styled.div`
   margin-top: 60px;
@@ -50,13 +48,13 @@ const Holder = styled.div`
   }
 `;
 
-const Outwear = () => {
+const Products = (data) => {
   return (
     <Section>
       <Container>
         <Body>
           <Holder className=" mt-[70px] max-[990px]:mt-[120px]">
-            {data.map((item) => (
+            {data.data.map((item) => (
               <Product data-aos="fade" key={`image `+item.id} className=" max-[990px]:w-[auto]">
                 <Image className=" w-[34vw] h-[40vh] object-cover" src={item.img} />
                 <Title className=" bottom-0 p-2">
@@ -96,4 +94,4 @@ const Outwear = () => {
   );
 };
 
-export default Outwear;
+export default Products;

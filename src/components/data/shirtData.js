@@ -1,4 +1,4 @@
-export const data = [
+export const shirt = [
     {
       id: 1,
       img: "https://angloitalian.com/cdn/shop/files/Anglo-Italian_18775_8cc2e13c-2356-497b-bd4e-d221c9a92e04.jpg?v=1698357477&width=500",

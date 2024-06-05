@@ -1,4 +1,4 @@
-export const data = [
+export const denim = [
     {
       id: 1,
       img: "https://angloitalian.com/cdn/shop/files/Anglo-Italian_257956.jpg?v=1712244977&width=500",

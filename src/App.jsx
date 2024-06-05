@@ -2,16 +2,18 @@ import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Route, Routes } from "react-router-dom";
+import { newProd } from "./components/data/mockData";
+import { shirt } from "./components/data/shirtData";
+import { foot } from "./components/data/footData";
+import { tailor } from "./components/data/tailoringData";
+import { out } from "./components/data/outData";
+import { denim } from "./components/data/denimData";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Shop from "./components/Shop";
-import New from "./components/New";
-import Shirting from "./components/Shirting";
-import Footwear from "./components/Footwear";
-import Tailoring from "./components/Tailoring";
-import Outwear from "./components/Outwear";
-import Denim from "./components/Denim";
+
 import { useEffect } from "react";
+import Products from "./components/Products";
 
 function App() {
   useEffect(() => {
@@ -22,12 +24,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="/new" element={<New />} />
-        <Route path="/shirting" element={<Shirting />} />
-        <Route path="/footwear" element={<Footwear />} />
-        <Route path="/tailoring" element={<Tailoring />} />
-        <Route path="/outwear" element={<Outwear />} />
-        <Route path="/denim" element={<Denim />} />
+        <Route path="/new" element={<Products data={newProd}/>} />
+        <Route path="/shirting"element={<Products data={shirt}/>}  />
+        <Route path="/footwear" element={<Products data={foot}/>}  />
+        <Route path="/tailoring" element={<Products data={tailor}/>}  />
+        <Route path="/outwear" element={<Products data={out}/>}  />
+        <Route path="/denim" element={<Products data={denim}/>}  />
       </Routes>
       <Shop />
     </>
