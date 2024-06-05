@@ -1,6 +1,5 @@
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
 
 const Section = styled.div`
   margin-top: 60px;
@@ -27,7 +26,7 @@ const Title = styled.div`
 
 const Explore = styled.div``;
 
-const Product = styled.div`
+const Products = styled.div`
   padding: 10px;
 `;
 
@@ -51,38 +50,18 @@ const Holder = styled.div`
   }
 `;
 
-const Products = (data) => {
-
-  const formatString=(inputString)=>{
-    let outputString = inputString.replace(/ /g, "_").toLowerCase();
-    return outputString;
-  }
-
+const Product = () => {
+  const params = useParams();
+  console.log()
   return (
     <Section>
       <Container>
         <Body>
           <Holder className=" mt-[70px] max-[990px]:mt-[120px]">
-            {data.data.map((item) => (
-              <Product
-                data-aos="fade"
-                key={`image ` + item.id}
-                className=" max-[990px]:w-[auto]"
-              >
-                <a href={`/product/${formatString(item.title)}`}>
-                  <Image
-                    className=" w-[34vw] h-[40vh] object-cover"
-                    src={item.img}
-                  />
-                </a>
-                <Title className=" bottom-0 p-2">
-                  <h2 className="text-[15px]">{item.title}</h2>
-                  <Explore className="mt-[10px]">
-                    <div>{item.price}</div>
-                  </Explore>
-                </Title>
-              </Product>
-            ))}
+            product test {JSON.stringify(params)}
+            <div>
+                
+            </div>
           </Holder>
         </Body>
         <Footer>
@@ -112,4 +91,4 @@ const Products = (data) => {
   );
 };
 
-export default Products;
+export default Product;

@@ -12,8 +12,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Shop from "./components/Shop";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Products from "./components/Products";
+import Product from "./components/Product";
 
 function App() {
   useEffect(() => {
@@ -24,12 +25,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="/new" element={<Products data={newProd}/>} />
-        <Route path="/shirting"element={<Products data={shirt}/>}  />
-        <Route path="/footwear" element={<Products data={foot}/>}  />
-        <Route path="/tailoring" element={<Products data={tailor}/>}  />
-        <Route path="/outwear" element={<Products data={out}/>}  />
-        <Route path="/denim" element={<Products data={denim}/>}  />
+        <Route path="/new/*" element={<Products data={newProd} />}/>                
+        <Route path="/shirting" element={<Products data={shirt} />} />
+        <Route path="/footwear" element={<Products data={foot} />} />
+        <Route path="/tailoring" element={<Products data={tailor} />} />
+        <Route path="/outwear" element={<Products data={out} />} />
+        <Route path="/denim" element={<Products data={denim} />} />
+        <Route path="product/:id" element={<Product />}/>
       </Routes>
       <Shop />
     </>
