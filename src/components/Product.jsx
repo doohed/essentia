@@ -11,7 +11,9 @@ const Section = styled.div`
 
 const Container = styled.div``;
 
-const Body = styled.div``;
+const Body = styled.div`
+
+`;
 
 const Footer = styled.div`
   display: flex;
@@ -50,9 +52,8 @@ const Holder = styled.div`
   }
 `;
 
-const Product = () => {
+const Product = ({ data }) => {
   const params = useParams();
-  console.log()
   return (
     <Section>
       <Container>
@@ -60,7 +61,8 @@ const Product = () => {
           <Holder className=" mt-[70px] max-[990px]:mt-[120px]">
             product test {JSON.stringify(params)}
             <div>
-                
+                product test
+                <pre>{JSON.stringify(data, null, 2)}</pre>
             </div>
           </Holder>
         </Body>

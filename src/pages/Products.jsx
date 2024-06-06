@@ -51,25 +51,35 @@ const Holder = styled.div`
   }
 `;
 
-const Products = (data) => {
+const Products = ({data, onDataChange}) => {
+  console.log(onDataChange); 
 
   const formatString=(inputString)=>{
     let outputString = inputString.replace(/ /g, "_").toLowerCase();
     return outputString;
   }
 
+  const handleClick = (item) => {
+    const jsonObject = {item};
+    if (typeof onDataChange === 'function') { // Ensure onDataChange is a function
+      onDataChange(jsonObject);
+    } else {
+      console.error('onDataChange is not a function');
+    }
+  };
+//
   return (
     <Section>
       <Container>
         <Body>
           <Holder className=" mt-[70px] max-[990px]:mt-[120px]">
-            {data.data.map((item) => (
+            {data.map((item) => (
               <Product
                 data-aos="fade"
                 key={`image ` + item.id}
                 className=" max-[990px]:w-[auto]"
               >
-                <a href={`/product/${formatString(item.title)}`}>
+                <a onClick={()=>{handleClick(item)}}>
                   <Image
                     className=" w-[34vw] h-[40vh] object-cover"
                     src={item.img}
