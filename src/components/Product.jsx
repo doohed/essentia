@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 
 const Section = styled.div`
   margin-top: 60px;
@@ -52,14 +53,27 @@ const Holder = styled.div`
   }
 `;
 
-const Product = ({ data }) => {
+const Product = () => {
+  const [data, setData] = useState({})
+
   const params = useParams();
+
+  const formatString=(inputString)=>{
+    let outputString = inputString.replace(/_/g, " ").toLowerCase();
+    return outputString;
+  }
+
+  useEffect(() => {
+    formatString(params.title)
+  }, []);
+
+  console.log(params)
   return (
     <Section>
       <Container>
         <Body>
           <Holder className=" mt-[70px] max-[990px]:mt-[120px]">
-            product test {JSON.stringify(params)}
+            product test {formatString(params.title)}
             <div>
                 product test
                 <pre>{JSON.stringify(data, null, 2)}</pre>

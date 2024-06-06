@@ -51,8 +51,7 @@ const Holder = styled.div`
   }
 `;
 
-const Products = ({data, onDataChange}) => {
-  console.log(onDataChange); 
+const Products = ({data}) => {
 
   const formatString=(inputString)=>{
     let outputString = inputString.replace(/ /g, "_").toLowerCase();
@@ -60,14 +59,9 @@ const Products = ({data, onDataChange}) => {
   }
 
   const handleClick = (item) => {
-    const jsonObject = {item};
-    if (typeof onDataChange === 'function') { // Ensure onDataChange is a function
-      onDataChange(jsonObject);
-    } else {
-      console.error('onDataChange is not a function');
-    }
+    
+    window.location.assign(`/product/${item.id}/${formatString(item.title)}`);
   };
-//
   return (
     <Section>
       <Container>
@@ -79,7 +73,7 @@ const Products = ({data, onDataChange}) => {
                 key={`image ` + item.id}
                 className=" max-[990px]:w-[auto]"
               >
-                <a onClick={()=>{handleClick(item)}}>
+                <a onClick={()=>{handleClick(item)}} >
                   <Image
                     className=" w-[34vw] h-[40vh] object-cover"
                     src={item.img}
